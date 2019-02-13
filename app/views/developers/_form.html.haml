@@ -1,0 +1,14 @@
+= simple_form_for @developer, html: { multipart: true } do |f|
+  - if @developer.errors.any?
+    #errors
+      %p
+      = @developer.errors.count
+      Prevented this developer from being added. 
+      %ul
+      - @developer.errors.full_messages.each do |msg|
+        %li= msg
+.panel-body
+  = f.input :title, input_html: { class: 'form-control' }
+  = f.input :description, input_html: { class: 'form-control' }
+
+= f.button :submit, class: "btn btn-primary" 
