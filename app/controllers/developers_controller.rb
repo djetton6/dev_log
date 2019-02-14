@@ -2,6 +2,7 @@ class DevelopersController < ApplicationController
     before_action :find_developer, only: [:show, :edit, :update, :destroy]
     
     def index
+        @developer = Developer.all.order("created_at DESC")
     end
 
     def show
@@ -20,6 +21,22 @@ class DevelopersController < ApplicationController
             render 'new'
         end
     end 
+
+    def edit
+    end 
+
+    def update
+      if @developer.update(developer_params)
+        redirect_to @developer
+      else
+        render 'edit'
+      end
+    end
+
+    def destroy
+      @developer.destroy
+      redirect_to root_path, notice: "Developer Deleted"
+    end
 
     private
 
