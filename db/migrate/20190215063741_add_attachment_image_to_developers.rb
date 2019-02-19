@@ -9,3 +9,5 @@ class AddAttachmentImageToDevelopers < ActiveRecord::Migration[5.2]
     remove_attachment :developers, :image
   end
 end
+#35:34
+

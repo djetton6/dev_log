@@ -41,7 +41,7 @@ class DevelopersController < ApplicationController
     private
 
     def developer_params
-        params.require(:developer).permit(:title, :description)
+        params.require(:developer).permit(:title, :description, :image)
     end
 
     def find_developer

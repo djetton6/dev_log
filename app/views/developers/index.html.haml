@@ -1,2 +1,9 @@
-- @developer.each do |developer|
-  %h2= link_to developer.title, developer
+- @developer.each_slice(3) do |developers|
+  .row
+    - developers.each do |developer|
+      .col-md-4
+        .developer
+          .image_wrapper
+            = link_to developer do
+              = image_tag developer.image.url(:medium)
+          %h2= link_to developer.title, developer

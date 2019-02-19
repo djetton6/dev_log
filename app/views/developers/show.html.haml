@@ -1,3 +1,4 @@
+= image_tag @developer.image.url(:medium, class: "developer_image")
 %h1= @developer.title
 %p= @developer.description
 
@@ -5,5 +6,3 @@
 = link_to "Edit", edit_developer_path, class: "btn btn-default"
 = link_to "Delete", developer_path, method: :delete, data: {confirm: "Are you sure?" }, class: "btn btn-default"
 
-
--# 21:47
