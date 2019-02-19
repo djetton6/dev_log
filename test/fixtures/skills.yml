@@ -2,8 +2,8 @@
 
 one:
   name: MyString
-  developer: 
+  developer: one
 
 two:
   name: MyString
-  developer: 
+  developer: two
